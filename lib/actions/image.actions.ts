@@ -7,7 +7,7 @@ import User from "../database/models/user.model";
 import Image from "../database/models/image.model";
 import { redirect } from "next/navigation";
 
-//import { v2 as cloudinary } from "cloudinary";
+import { v2 as cloudinary } from "cloudinary";
 
 const populateUser = (query: any) =>
   query.populate({
@@ -92,7 +92,7 @@ export async function getImageById(imageId: string) {
     handleError(error);
   }
 }
-/* 
+
 // GET IMAGES
 export async function getAllImages({
   limit = 9,
@@ -185,4 +185,3 @@ export async function getUserImages({
     handleError(error);
   }
 }
- */
